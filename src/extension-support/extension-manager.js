@@ -53,7 +53,9 @@ const builtinDevices = {
     arduinoRaspberryPiPico: () => require('../devices/arduinoRaspberryPiPico/arduinoRaspberryPiPico'),
     // Microbit
     microbit: () => require('../devices/microbit/microbit'),
-    microbitV2: () => require('../devices/microbit/microbitV2')
+    microbitV2: () => require('../devices/microbit/microbitV2'),
+    //ecool
+    ecool: () => require('../devices/ecool/ecool')
 
     // TODO: transform these to device extension.
     // wedo2: () => require('../extensions/scratch3_wedo2'),
