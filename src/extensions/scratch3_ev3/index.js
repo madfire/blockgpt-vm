@@ -22,6 +22,7 @@ const blockIconURI = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNv
  */
 const Ev3PairingPin = '1234';
 
+
 /**
  * A maximum number of BT message sends per second, to be enforced by the rate limiter.
  * @type {number}

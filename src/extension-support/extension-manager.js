@@ -26,7 +26,13 @@ const builtinExtensions = {
     text2speech: () => require('../extensions/scratch3_text2speech'),
     translate: () => require('../extensions/scratch3_translate'),
     videoSensing: () => require('../extensions/scratch3_video_sensing'),
-    makeymakey: () => require('../extensions/scratch3_makeymakey')
+    makeymakey: () => require('../extensions/scratch3_makeymakey'),
+    microbit: () => require('../extensions/scratch3_microbit'),
+    wedo2: () => require('../extensions/scratch3_wedo2'),
+    ev3: () => require('../extensions/scratch3_ev3'),
+    boost: () => require('../extensions/scratch3_boost'),
+    gdxfor: () => require('../extensions/scratch3_gdx_for'),
+    ml2scratch: () => require('../extensions/scratch3_ml2scratch'),
 };
 
 const builtinDevices = {
