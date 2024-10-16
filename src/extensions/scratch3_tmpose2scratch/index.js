@@ -12,50 +12,43 @@ const Message = {
         'ja': 'ポーズ分類モデルURL[URL]',
         'ja-Hira': 'ポーズぶんるいモデル[URL]',
         'en': 'pose classification model URL [URL]',
-        'ko': '포즈 인식 모델 URL [URL]',
-        'zh-cn': '姿势分类模型地址[URL]'
+        'ko': '포즈 인식 모델 URL [URL]'
     },
     pose_classification_sample_model_url: {
         'ja': 'https://teachablemachine.withgoogle.com/models/aqQcgCOtq/',
         'ja-Hira': 'https://teachablemachine.withgoogle.com/models/aqQcgCOtq/',
         'en': ' ',
-        'ko': ' ',
-        'zh-cn': 'https://teachablemachine.withgoogle.com/models/aqQcgCOtq/'
+        'ko': ' '
     },
     classify_pose: {
         'ja': 'ポーズを推定する',
         'ja-Hira': 'ポーズをすいていする',
         'en': 'estimate pose',
-        'ko': '포즈 인식하기',
-        'zh-cn': '预测姿势'
+        'ko': '포즈 인식하기'
     },
     pose_label: {
         'ja': 'ポーズラベル',
         'ja-Hira': 'ポーズラベル',
         'en': 'pose label',
-        'ko': '포즈 라벨',
-        'zh-cn': '姿势标签'
+        'ko': '포즈 라벨'
     },
     is_pose_label_detected: {
         'ja': '[LABEL]のポーズになった',
         'ja-Hira': '[LABEL]のポーズになった',
         'en': 'pose [LABEL] detected',
-        'ko': '[LABEL] 포즈가 인식됨',
-        'zh-cn': '检测到[LABEL]'
+        'ko': '[LABEL] 포즈가 인식됨'
     },
     pose_label_confidence: {
         'ja': 'ポーズラベル[LABEL]の確度',
         'ja-Hira': 'ポーズラベル[LABEL]のかくど',
         'en': 'confidence of pose [LABEL]',
-        'ko': '[LABEL] 포즈의 신뢰도',
-        'zh-cn': '[LABEL]的置信度'
+        'ko': '[LABEL] 포즈의 신뢰도'
     },
     when_received_pose_label_block: {
         'ja': 'ポーズラベル[LABEL]を受け取ったとき',
         'ja-Hira': 'ポーズラベル[LABEL]をうけとったとき',
         'en': 'when received pose label:[LABEL]',
-        'ko': '[LABEL] 포즈 라벨을 받았을 때:',
-        'zh-cn': '当接收到姿势标签[LABEL]'
+        'ko': '[LABEL] 포즈 라벨을 받았을 때:'
     },
     label_block: {
         'ja': 'ラベル',
@@ -96,15 +89,13 @@ const Message = {
         'ja': '確度のしきい値を[CONFIDENCE_THRESHOLD]にする',
         'ja-Hira': 'かくどのしきいちを[CONFIDENCE_THRESHOLD]にする',
         'en': 'set confidence threshold [CONFIDENCE_THRESHOLD]',
-        'ko': '신뢰도 기준 설정 [CONFIDENCE_THRESHOLD]',
-        'zh-cn': '设定置信度阈值[CONFIDENCE_THRESHOLD]'
+        'ko': '신뢰도 기준 설정 [CONFIDENCE_THRESHOLD]'
     },
     get_confidence_threshold: {
         'ja': '確度のしきい値',
         'ja-Hira': 'かくどのしきいち',
         'en': 'confidence threshold',
-        'ko': '신뢰도 기준',
-        'zh-cn': '置信度阈值'
+        'ko': '신뢰도 기준'
     },
     set_classification_interval: {
         'ja': 'ラベル付けを[CLASSIFICATION_INTERVAL]秒間に1回行う',
@@ -117,7 +108,7 @@ const Message = {
         'ja': 'ビデオを[VIDEO_STATE]にする',
         'ja-Hira': 'ビデオを[VIDEO_STATE]にする',
         'en': 'turn video [VIDEO_STATE]',
-        'ko': '비디오 화면 [VIDEO_STATE]',
+        'ko':'비디오 화면 [VIDEO_STATE]',
         'zh-cn': '[VIDEO_STATE]摄像头'
     },
     on: {
@@ -192,11 +183,15 @@ class Scratch3TMPose2ScratchBlocks {
     initPoseProbableLabels () {
         this.poseProbableLabels = [];
     }
+    // 返回extension的ID
+    get EXTENSION_ID () {
+        return 'tmpose2scratch';
+    }
 
     getInfo () {
         this.locale = this.setLocale();
 
-        return {
+        return [{
             id: 'tmpose2scratch',
             name: 'TMPose2Scratch',
             blockIconURI: blockIconURI,
@@ -331,7 +326,7 @@ class Scratch3TMPose2ScratchBlocks {
                 classification_interval_menu: this.getClassificationIntervalMenu(),
                 classification_menu: this.getClassificationMenu()
             }
-        };
+        }];
     }
 
     /**

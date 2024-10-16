@@ -896,7 +896,7 @@ class Scratch3WeDo2Blocks {
     /**
      * @return {string} - the ID of this extension.
      */
-    static get EXTENSION_ID () {
+    get EXTENSION_ID () {
         return 'wedo2';
     }
 

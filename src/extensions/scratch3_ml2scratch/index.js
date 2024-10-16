@@ -2,7 +2,7 @@ const ArgumentType = require('../../extension-support/argument-type');
 const BlockType = require('../../extension-support/block-type');
 const Cast = require('../../util/cast');
 const log = require('../../util/log');
-const ml5 = require('ml5');
+const ml5 = require('../../util/ml5.min.js');
 
 /**
  * Formatter which is used for translating.
@@ -285,13 +285,13 @@ class Scratch3ML2ScratchBlocks {
    * @return {string} - the name of this extension.
    */
   static get EXTENSION_NAME() {
-    return 'KNN图像分类';
+    return 'KNN Classifier';
   }
 
   /**
    * @return {string} - the ID of this extension.
    */
-  static get EXTENSION_ID() {
+  get EXTENSION_ID() {
     return 'ml2scratch';
   }
 
@@ -351,7 +351,7 @@ class Scratch3ML2ScratchBlocks {
   getInfo() {
     this.locale = this.setLocale();
 
-    return {
+    return [{
       id: Scratch3ML2ScratchBlocks.EXTENSION_ID,
       name: Scratch3ML2ScratchBlocks.EXTENSION_NAME,
       extensionURL: Scratch3ML2ScratchBlocks.extensionURL,
@@ -602,7 +602,7 @@ class Scratch3ML2ScratchBlocks {
         classification_menu: this.getClassificationMenu(),
         input_menu: this.getInputMenu()
       }
-    };
+    }];
   }
 
   /**
