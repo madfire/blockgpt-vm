@@ -764,7 +764,7 @@ class OpenBlockArduinoRaspberryPiPicoDevice {
                             },
                             VALUE: {
                                 type: ArgumentType.STRING,
-                                defaultValue: 'Hello OpenBlock'
+                                defaultValue: 'Hello BlockGPT'
                             },
                             EOL: {
                                 type: ArgumentType.STRING,
