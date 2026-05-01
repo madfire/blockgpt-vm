@@ -931,7 +931,7 @@ class Scratch3Ev3Blocks {
      * The ID of the extension.
      * @return {string} the id
      */
-    static get EXTENSION_ID () {
+    get EXTENSION_ID () {
         return 'ev3';
     }
 
@@ -948,7 +948,7 @@ class Scratch3Ev3Blocks {
         this.runtime = runtime;
 
         // Create a new EV3 peripheral instance
-        this._peripheral = new EV3(this.runtime, Scratch3Ev3Blocks.EXTENSION_ID);
+        this._peripheral = new EV3(this.runtime, this.EXTENSION_ID);
 
         this._playNoteForPicker = this._playNoteForPicker.bind(this);
         this.runtime.on('PLAY_NOTE', this._playNoteForPicker);
@@ -960,7 +960,7 @@ class Scratch3Ev3Blocks {
      */
     getInfo () {
         return [{
-            id: Scratch3Ev3Blocks.EXTENSION_ID,
+            id: 'ev3',
             name: 'LEGO EV3',
             blockIconURI: blockIconURI,
             showStatusButton: true,

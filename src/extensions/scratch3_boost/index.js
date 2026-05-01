@@ -1255,7 +1255,7 @@ class Scratch3BoostBlocks {
     /**
      * @return {string} - the ID of this extension.
      */
-    static get EXTENSION_ID () {
+    get EXTENSION_ID () {
         return 'boost';
     }
 
@@ -1278,7 +1278,7 @@ class Scratch3BoostBlocks {
         this.runtime = runtime;
 
         // Create a new Boost peripheral instance
-        this._peripheral = new Boost(this.runtime, Scratch3BoostBlocks.EXTENSION_ID);
+        this._peripheral = new Boost(this.runtime, this.EXTENSION_ID);
     }
 
     /**
@@ -1286,7 +1286,7 @@ class Scratch3BoostBlocks {
      */
     getInfo () {
         return [{
-            id: Scratch3BoostBlocks.EXTENSION_ID,
+            id: 'boost',
             name: 'BOOST',
             blockIconURI: iconURI,
             showStatusButton: true,

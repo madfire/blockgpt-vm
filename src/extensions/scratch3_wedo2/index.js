@@ -919,7 +919,7 @@ class Scratch3WeDo2Blocks {
         this.runtime = runtime;
 
         // Create a new WeDo 2.0 peripheral instance
-        this._peripheral = new WeDo2(this.runtime, Scratch3WeDo2Blocks.EXTENSION_ID);
+        this._peripheral = new WeDo2(this.runtime, this.EXTENSION_ID);
     }
 
     /**
@@ -927,7 +927,7 @@ class Scratch3WeDo2Blocks {
      */
     getInfo () {
         return [{
-            id: Scratch3WeDo2Blocks.EXTENSION_ID,
+            id: 'wedo2',
             name: 'WeDo 2.0',
             blockIconURI: iconURI,
             showStatusButton: true,

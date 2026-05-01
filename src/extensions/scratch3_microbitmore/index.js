@@ -2174,7 +2174,7 @@ class MbitMoreBlocks {
             formatMessage = runtime.formatMessage;
         }
         // Create a new MicroBit peripheral instance
-        this._peripheral = new MbitMore(this.runtime, MbitMoreBlocks.EXTENSION_ID);
+        this._peripheral = new MbitMore(this.runtime, this.EXTENSION_ID);
 
         /**
          * The previous timestamps of button events.
@@ -2206,7 +2206,7 @@ class MbitMoreBlocks {
      */
     getInfo () {
         this.setupTranslations();
-        return {
+        return [{
             id: MbitMoreBlocks.EXTENSION_ID,
             name: MbitMoreBlocks.EXTENSION_NAME,
             extensionURL: MbitMoreBlocks.extensionURL,
@@ -2781,7 +2781,7 @@ class MbitMoreBlocks {
             },
             // eslint-disable-next-line no-use-before-define
             translationMap: extensionTranslations
-        };
+        }];
     }
 
     /**
