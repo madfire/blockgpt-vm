@@ -38,6 +38,8 @@ const builtinExtensions = {
     handpose2scratch : () => require('../extensions/scratch3_handpose2scratch'),
     posenet2scratch : () => require('../extensions/scratch3_posenet2scratch'),
     ml2scratch : () => require('../extensions/scratch3_ml2scratch'),
+    // gpt2scratch
+    gpt2scratch: () => require('../extensions/scratch3_gpt2scratch'),
 };
 
 const builtinDevices = {
@@ -67,6 +69,7 @@ const builtinDevices = {
     microbitV2: () => require('../devices/microbit/microbitV2'),
     //ecool
     ecool: () => require('../devices/ecool/ecool'),
+
 
     // TODO: transform these to device extension.
     // wedo2: () => require('../extensions/scratch3_wedo2'),

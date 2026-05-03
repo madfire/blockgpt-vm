@@ -472,7 +472,7 @@ class Scratch3GdxForBlocks {
     /**
      * @return {string} - the name of this extension.
      */
-    static get EXTENSION_NAME () {
+    get EXTENSION_NAME () {
         return 'Force and Acceleration';
     }
 

@@ -352,7 +352,7 @@ class Scratch3ML2ScratchBlocks {
     this.locale = this.setLocale();
 
     return [{
-      id: Scratch3ML2ScratchBlocks.EXTENSION_ID,
+      id: 'ml2scratch',
       name: Scratch3ML2ScratchBlocks.EXTENSION_NAME,
       extensionURL: Scratch3ML2ScratchBlocks.extensionURL,
       blockIconURI: blockIconURI,
