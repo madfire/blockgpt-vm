@@ -33,6 +33,9 @@ class ScratchLinkWebSocket {
         case 'SERIALPORT':
             this._ws = new WebSocket('ws://127.0.0.1:20111/openblock/serialport');
             break;
+        case 'SSH':
+            this._ws = new WebSocket('ws://127.0.0.1:20111/openblock/ssh');
+            break;
         default:
             throw new Error(`Unknown OpenblockLink socket Type: ${this._type}`);
         }

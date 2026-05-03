@@ -64,6 +64,10 @@ const builtinDevices = {
     arduinoK210Maixduino: () => require('../devices/arduinoK210/arduinoK210Maixduino'),
     // Raspberry Pi Pico
     arduinoRaspberryPiPico: () => require('../devices/arduinoRaspberryPiPico/arduinoRaspberryPiPico'),
+    // Remote Linux
+    remoteLinuxK10: () => require('../devices/remoteLinux/remoteLinuxK10'),
+    remoteLinuxCm5: () => require('../devices/remoteLinux/remoteLinuxCm5'),
+    remoteLinuxRk: () => require('../devices/remoteLinux/remoteLinuxRk'),
     // Microbit
     microbit: () => require('../devices/microbit/microbit'),
     microbitV2: () => require('../devices/microbit/microbitV2'),
